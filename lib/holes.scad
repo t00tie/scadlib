@@ -12,17 +12,16 @@ module tube(
     id=0,
     h=1,
     center=false,
-    $fa=0,
-    $fn=0,
-    $fs=0,
     poly=true){
     difference(){
-    cylinder(r=od/2,h=h,center=center,$fa=$fa,$fn=$fn,$fs=$fs);
+    hole(d=od,h=h,center=center);
     translate([0,0,-1])
-        if(poly)
-            polyhole(r=id,h=h+2,center=center);
-        else
-            cylinder(r=id,h=h+2,center=center,$fa=$fa,$fn=$fn,$fs=$fs);
+        if(poly){
+            polyhole(d=id,h=h+2,center=center);
+        }
+        else{
+            hole(d=id,h=h+2,center=center);
+        }
     }
 }
 
