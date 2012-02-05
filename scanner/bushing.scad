@@ -30,7 +30,7 @@ difference(){
 linear_extrude(height=height,twist=twist*height,slices=height/layerheight) difference(){
 		intersection(){
 			for(i=[1:n]) rotate([0,0,360*i/n])	translate([id/2+space*2,0]) circle(r=space*2,$fn=20);
-			circle(r=id/2+space);
+			circle(r=id/2+space+wall/2);
 		}
 }
 
