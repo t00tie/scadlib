@@ -1,7 +1,7 @@
-n=10;
-id=41;
+n=4;
+id=38-0.5;
 wall=5;
-finwidth=2;
+finwidth=5;
 space=1;
 twist=2.5;
 layerheight=1;
