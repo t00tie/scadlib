@@ -2,7 +2,7 @@ n=4;
 id=38-0.5;
 wall=5;
 finwidth=5;
-space=1;
+space=2;
 twist=2.5;
 layerheight=1;
 tubeholder_wall=5;
@@ -28,8 +28,10 @@ difference(){
 	cylinder(r=id/2+space,h=height*3,center=true);
 }
 linear_extrude(height=height,twist=twist*height,slices=height/layerheight) difference(){
-		for(i=[1:n]) rotate([0,0,360*i/n])	translate([0,finwidth]/-2) square([od-wall/2,finwidth]);
-		circle(r=id/2);
+		intersection(){
+			for(i=[1:n]) rotate([0,0,360*i/n])	translate([id/2+space*2,0]) circle(r=space*2,$fn=20);
+			circle(r=id/2+space);
+		}
 }
 
 
