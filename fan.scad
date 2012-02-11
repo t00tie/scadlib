@@ -38,6 +38,6 @@ module fan3d(){
 fan3d();
 
 difference(){
-	cylinder(r=r+blade_length+1,h=height);
-	cylinder(r=r+blade_length,h=height);
+	cylinder(r=r+blade_length+1,h=height,$fn=500);
+	cylinder(r=r+blade_length,h=height*3,center=true,$fn=500);
 }
