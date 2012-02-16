@@ -30,7 +30,5 @@ module stuffbox(h=55,x=1,y=1){
 		translate([1,1,2]) cube([50*x-2,50*x-2,h]);
 	}
 }
-boxbase();
-translate([60,0]) boxbase();
-//stuffbox();
+stuffbox();
 //for(x=[0:]) for(y=[0:1]) translate([60*x,60*y,(x+y)*10]) stuffbox();
