@@ -10,7 +10,7 @@ outer_diameter = m8_diameter/2+3.3;
 shaft_separation = 30;
 bearing_od = 22.6;
 bearing_id = m8_diameter;
-bearing_rodhole_d = bearing_id + 3;
+bearing_rodhole_d = m8_nut_diameter+1;  //bearing_id + 3;
 
 
 module origclamp(){
