@@ -1,14 +1,14 @@
 //An extruder inspired by Greg's Hinged Extruder.
-//Deisgned to be 
+//Designed to be awesome.
 
 include <stuff.scad>;
 
-membrane=0.1;
+membrane=.1;
 
 taphole=true;
 mountinghole_distance=25;
 
-hinge_bolt=3;
+hinge_bolt=3.2;
 
 filament_diameter=3;
 filament_diameter_hole=4;
@@ -69,9 +69,11 @@ module body(){
 	difference(){
 		union(){
 			translate([-z_offset,-bearing_diameter/2-bearing_sidewall,0]) //main block
-				cube([z_offset+bearing_diameter/2+bearing_sidewall,
+				cube([z_offset,
 					bearing_diameter+2*bearing_sidewall,
 					drivestack_length]);
+			cylinder(r=bearing_diameter/2+bearing_sidewall,h=drivestack_length);
+			
 			//hinge
 			translate([-z_offset+hinge_bolt,
 				-bearing_diameter/2-bearing_sidewall-hinge_bolt,

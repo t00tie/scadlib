@@ -7,3 +7,6 @@ module bzp(){
 module stainless(){
     color([1,1,1]*0.6) for(i=[1:$children]) child(i-1);
 }
+module steel(){
+    color([1,1,1]*0.5) for(i=[1:$children]) child(i-1);
+}

@@ -1,7 +1,7 @@
 use <bom.scad>;
 use <materials.scad>;
-module tslot(h=10,bom=true){
-    aluminium() linear_extrude(file="makerbeam.dxf",height=h);
+module tslot(h=10,bom=true,center=false){
+    aluminium() linear_extrude(file="/usr/local/share/openscad/libraries/makerbeam.dxf",height=h,center=center);
     if(bom) bom(1,"makerbeam",h);
 }
 module tslot_nut(h=5,hole=true,bom=true){
