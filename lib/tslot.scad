@@ -1,5 +1,5 @@
 //(C) Nathan Zadoks 2011
-//CC-BY-SA or GPLv2, pick your poison.
+//CC-BY-SA or GPLv2+, pick your poison.
 module tslot(
 	size=10,	//size of each side
 	length=10,	//length. descriptive enough, no?
