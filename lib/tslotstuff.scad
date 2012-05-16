@@ -1,3 +1,6 @@
+//(C) Nathan Zadoks 2012
+//CC-BY-SA or GPLv2+, pick your poison.
+
 module tslot_frame(wh=100,h=80,corners=true,fancycorners=true){
 	d=tslot_d;
     translate([0,0,-tslot_d])
