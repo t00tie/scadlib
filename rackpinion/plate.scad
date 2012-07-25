@@ -1,4 +1,4 @@
-use <materials.scad>;
+use <../lib/materials.scad>;
 include <globals.scad>;
 use <rackpinion.scad>;
 tslot_d=20;

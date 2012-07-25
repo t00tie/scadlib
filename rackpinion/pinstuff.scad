@@ -1,4 +1,4 @@
-use <materials.scad>;
+use <../lib/materials.scad>;
 include <globals.scad>;
 use <rackpinion.scad>;
 sheet_thickness=4;
@@ -9,7 +9,7 @@ module unsheet(color=true,center=false){
 module pinwheel(){
     steel() linear_extrude(height=sheet_thickness*3,center=true) pins();
     mirror([0,0,1]) translate([0,0,sheet_thickness/2]) unsheet() pinholder();
-   translate([0,0,sheet_thickness/2+0.01]) unsheet() pinholder();
+    translate([0,0,sheet_thickness/2+0.01]) unsheet() pinholder();
     unsheet(center=true) pinholder_center();
 }
 n=pins;

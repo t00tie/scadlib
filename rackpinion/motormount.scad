@@ -1,7 +1,7 @@
 include <globals.scad>;
 use <MCAD/stepper.scad>;
 use <rackpinion.scad>;
-use <materials.scad>;
+use <../lib/materials.scad>;
 use <hub.scad>;
 $fn=50;
 sheet=4;
