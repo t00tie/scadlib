@@ -32,7 +32,7 @@ module gearmotor_pgm37dc12_77(bom=true,negative=false,holes=true) translate([0,0
     }
 }
 //2D cut of the shaft
-module gearmotor_shaft_pgm37dc12_77{
+module gearmotor_shaft_pgm37dc12_77(){
     circle(r=6.3/2);
     translate([-5,2.2,3]) cube(size=[10,10,20]);
 }
