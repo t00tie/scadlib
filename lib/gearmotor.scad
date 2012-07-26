@@ -36,7 +36,7 @@ module gearmotor_shaft_pgm37dc12_77{
     circle(r=6.3/2);
     translate([-5,2.2,3]) cube(size=[10,10,20]);
 }
-*difference(){
+difference(){
     union(){
         for(i=[true,false]) mirror([0,0,i?0:1])
             linear_extrude(height=i?5:7) circle(r=30);
