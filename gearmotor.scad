@@ -7,7 +7,7 @@ module gearmotor_pgm37dc12_77(bom=true,negative=false,holes=true) translate([0,0
     if(bom) bom(1,str("motor-","PGM37DC12-77"));
     bzp() render() difference(){ 
         cylinder(r=6.3, h=15);
-        translate([-5,2.2,3]) cube(size=[10,10,20]);
+        translate([-10,2.2,3]) cube(20);
     }
     translate([0,0,-5]){
         if(negative&&holes) cylinder(r=12.5/2,h=20);
@@ -33,8 +33,10 @@ module gearmotor_pgm37dc12_77(bom=true,negative=false,holes=true) translate([0,0
 }
 //2D cut of the shaft
 module gearmotor_shaft_pgm37dc12_77(){
-    circle(r=6.3/2);
-    translate([-5,2.2,3]) cube(size=[10,10,20]);
+    difference(){
+        circle(r=6.3/2);
+        translate([-10,2.2]) square(20);
+    }
 }
 difference(){
     union(){
