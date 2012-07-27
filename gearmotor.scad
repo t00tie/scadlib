@@ -10,8 +10,10 @@ module gearmotor_pgm37dc12_77(bom=true,negative=false,holes=true) translate([0,0
         translate([-10,2.2,3]) cube(20);
     }
     translate([0,0,-5]){
+        //shaft bulge
         if(negative&&holes) cylinder(r=12.5/2,h=20);
-        if(negative) mirror([0,0,1]) cylinder(r=38/2,h=55);
+        //body
+        if(negative) translate([7,0,0]) mirror([0,0,1]) cylinder(r=38/2,h=55);
         steel() render(){
             //bulge around shaft
             cylinder(r=12.5/2,h=5);
