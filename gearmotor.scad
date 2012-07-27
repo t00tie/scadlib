@@ -6,7 +6,7 @@ $fn=100;
 module gearmotor_pgm37dc12_77(bom=true,negative=false,holes=true) translate([0,0,-1]){
     if(bom) bom(1,str("motor-","PGM37DC12-77"));
     bzp() render() difference(){ 
-        cylinder(r=6.3, h=15);
+        cylinder(r=6.3/2, h=15);
         translate([-10,2.2,3]) cube(20);
     }
     translate([0,0,-5]){
